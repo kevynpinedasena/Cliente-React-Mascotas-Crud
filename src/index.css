@@ -7,7 +7,161 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.contenedorHeader{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contenedorLogoTitu{
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.titulo{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 30px;
+  color: rgb(71, 68, 68);
+}
+
+.logo{
+  width: 10%;
+}
+
+.menu{
+  width: 25%;
+  display: flex;
+}
+
+.hr{
+  width: 90%;
+  height: 1px;
+  background-color: rgba(58, 54, 54, 0.656);
+  box-shadow: 1px 0px 3px rgba(50, 48, 48, 0.529);
+  margin-left: 40px;
+}
+
+nav{
+  display: flex;
+  gap: 20px;
+}
+.ancla{
+  text-decoration: none;
+  font-size: 18px;
+  color: rgb(56, 53, 53);
+  transition: 0.5s;
+}
+
+.ancla:hover{
+  font-size: 20px;
+  transition: 0.5s;
+}
+
+/* footer */
+
+.contenedorFooter{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.contenedorImg{
+  width: 50%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.nombre{
+  width: 50%;
+  align-items: center;
+  color: rgb(56, 53, 53);
+  margin-left: 65px;
+}
+
+.nombre h2{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 30px;
+}
+
+.imagenes{
+  width: 50px;
+  height: 40px;
+}
+
+/* modal */
+.btn{
+  margin-left: 40px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  max-width: 500px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.modal-header h2 {
+  margin: 0;
+}
+
+.modal-header button {
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 20px 0;
+}
+
+.cerrarModal{
+  color: red;
+}
+
+/* tabla */
+.contTabla{
+  width: 100%;
+}
+.contsMascota{
+  width: 90%;
+  margin-left: 40px;
+}
+
+.gestionUsuario{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
