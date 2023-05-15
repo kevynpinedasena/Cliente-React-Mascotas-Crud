@@ -38,7 +38,6 @@ export const ModalGuardarMascotas = ( {listaMascota} ) => {
 
     const guardarMascota = async () =>{
         try {
-            console.log(valorDocumento,valorNombre,valorEdad,valorPeso,valorAltura,imagen.name);
             if (valorDocumento === "") {
                 Swal.fire("Alerta¡","Por favor Ingrese el ID de la Mascota","info");
             }
@@ -100,26 +99,26 @@ export const ModalGuardarMascotas = ( {listaMascota} ) => {
             <div className="modal-overlay">
                 <div className="modal2">
                     <div className="modal-header">
-                        <h2>Registro de Mascotas</h2>
+                        <h2 className="detalleH2">Registro de Mascotas</h2>
                         <button className="cerrarModal" onClick={cerrarModal}>X</button>
                     </div>
                     <div className="modal-body">
                         <div className='formulario'>
                             
-                            <Input estilo={"input"} valor={valorDocumento} placeholder={"ID"} tipo={"number"} 
-                            evento={(e) => setValorDocumento(e.target.value)}/>
+                            <Input estilo={"input"} valor={valorDocumento} placeholder={"ID"} tipo={"text"} 
+                            evento={(e) => setValorDocumento(e.target.value.replace(/[^0-9]/g, ''))}/>
 
                             <Input estilo={"input"} valor={valorNombre} placeholder={"Nombre"} tipo={"text"}
                             evento={(e) => setValorNombre(e.target.value)} />
 
                             <Input estilo={"input"} valor={valorEdad} placeholder={"Edad"} tipo={"text"}
-                            evento={(e) => setValorEdad(e.target.value)} />
+                            evento={(e) => setValorEdad(e.target.value.replace(/[^0-9]/g, ''))} />
 
                             <Input estilo={"input"} valor={valorPeso} placeholder={"Peso"} tipo={"text"}
-                            evento={(e) => setValorPeso(e.target.value)} />
+                            evento={(e) => setValorPeso(e.target.value.replace(/[^0-9]/g, ''))} />
 
                             <Input estilo={"input"} valor={valorAltura} placeholder={"Altura"} tipo={"text"}
-                            evento={(e) => setValorAltura(e.target.value)} />
+                            evento={(e) => setValorAltura(e.target.value.replace(/[^0-9]/g, ''))} />
                             
                             <Input estilo={"inputImg"} tipo={"file"} evento={capturarImagen} />
 

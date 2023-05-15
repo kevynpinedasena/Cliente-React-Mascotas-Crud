@@ -3,6 +3,7 @@ import { ModalDetalle } from "../ModalDetalle/ModalDetalle";
 import { IconName, FcTodoList, FcEmptyTrash } from "react-icons/fc";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { ModalActualizar } from "../ModalActualizar/ModalActualizar";
 
 export const Mascota = ( {mascota = [], listaMascota} ) => {
 
@@ -49,14 +50,14 @@ export const Mascota = ( {mascota = [], listaMascota} ) => {
                     {
                         mascota.map( (item) => (
                          <tr>
-                            <th scope="row"><ModalDetalle Documento={item.docMascota} nombre={item.nomMascota}/></th>
-                            <th scope="row">{item.docMascota}</th>
-                            <th scope="row">{item.nomMascota}</th>
-                            <th scope="row">{item.edad}</th>
-                            <th scope="row">{item.peso}</th>
-                            <th scope="row">{item.altura}</th>
-                            <th scope="row">ac</th>
-                            <th scope="row"><button className="btn" onClick={ () => eliminar(item.docMascota)}><FcEmptyTrash width={"20px"}/></button></th>
+                            <th className="thRes" scope="row"><ModalDetalle documento={item.docMascota} nombre={item.nomMascota} edad={item.edad} peso={item.peso} altura={item.altura} foto={item.imagen}/></th>
+                            <th className="thRes" scope="row">{item.docMascota}</th>
+                            <th className="thRes" scope="row">{item.nomMascota}</th>
+                            <th className="thRes" scope="row">{item.edad}</th>
+                            <th className="thRes" scope="row">{item.peso}</th>
+                            <th className="thRes" scope="row">{item.altura}</th>
+                            <th className="thRes" scope="row"><ModalActualizar documento={item.docMascota} nombre={item.nomMascota} edad={item.edad} peso={item.peso} altura={item.altura} imagen={item.imagen} funcionListaMascotas={listaMascota}/></th>
+                            <th className="thRes" scope="row"><button className="btn btn22 btn-danger" onClick={ () => eliminar(item.docMascota)}><FcEmptyTrash /></button></th>
                          </tr>   
                         ))
                     }
